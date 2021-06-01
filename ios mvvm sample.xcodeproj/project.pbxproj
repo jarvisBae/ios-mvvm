@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,7 +16,13 @@
 		9B8884CA2665F3E100FBF9FE /* ios_mvvm_sampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8884C92665F3E100FBF9FE /* ios_mvvm_sampleTests.swift */; };
 		9B8884D52665F3E100FBF9FE /* ios_mvvm_sampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8884D42665F3E100FBF9FE /* ios_mvvm_sampleUITests.swift */; };
 		9B8884ED2665FCE000FBF9FE /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8884EC2665FCE000FBF9FE /* LoginPage.swift */; };
-		9B8884F22665FCF700FBF9FE /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8884F12665FCF700FBF9FE /* Login.storyboard */; };
+		9B8884F92665FECE00FBF9FE /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8884F82665FECE00FBF9FE /* List.storyboard */; };
+		9B8884FE2665FEDA00FBF9FE /* ListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8884FD2665FEDA00FBF9FE /* ListPage.swift */; };
+		9B8885212666028F00FBF9FE /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9B8885202666028F00FBF9FE /* RxSwift */; };
+		9B8885232666028F00FBF9FE /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 9B8885222666028F00FBF9FE /* RxCocoa */; };
+		9B8885282666030300FBF9FE /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8885272666030300FBF9FE /* UserInfo.swift */; };
+		9B88852D266603D800FBF9FE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B88852C266603D800FBF9FE /* LoginViewModel.swift */; };
+		9B888538266614FD00FBF9FE /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B888537266614FD00FBF9FE /* LoginModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +58,11 @@
 		9B8884D42665F3E100FBF9FE /* ios_mvvm_sampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_mvvm_sampleUITests.swift; sourceTree = "<group>"; };
 		9B8884D62665F3E100FBF9FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B8884EC2665FCE000FBF9FE /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
-		9B8884F12665FCF700FBF9FE /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		9B8884F82665FECE00FBF9FE /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
+		9B8884FD2665FEDA00FBF9FE /* ListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPage.swift; sourceTree = "<group>"; };
+		9B8885272666030300FBF9FE /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		9B88852C266603D800FBF9FE /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		9B888537266614FD00FBF9FE /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B8885232666028F00FBF9FE /* RxCocoa in Frameworks */,
+				9B8885212666028F00FBF9FE /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +150,8 @@
 		9B8884E82665F9D200FBF9FE /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				9B8884EC2665FCE000FBF9FE /* LoginPage.swift */,
-				9B8884F12665FCF700FBF9FE /* Login.storyboard */,
+				9B8884F62665FEB600FBF9FE /* Login */,
+				9B8884F72665FEBE00FBF9FE /* List */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -147,6 +159,8 @@
 		9B8884E92665F9DD00FBF9FE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9B8885272666030300FBF9FE /* UserInfo.swift */,
+				9B888537266614FD00FBF9FE /* LoginModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -154,8 +168,26 @@
 		9B8884EA2665F9E700FBF9FE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				9B88852C266603D800FBF9FE /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9B8884F62665FEB600FBF9FE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9B8884EC2665FCE000FBF9FE /* LoginPage.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		9B8884F72665FEBE00FBF9FE /* List */ = {
+			isa = PBXGroup;
+			children = (
+				9B8884FD2665FEDA00FBF9FE /* ListPage.swift */,
+				9B8884F82665FECE00FBF9FE /* List.storyboard */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +206,10 @@
 			dependencies = (
 			);
 			name = "ios mvvm sample";
+			packageProductDependencies = (
+				9B8885202666028F00FBF9FE /* RxSwift */,
+				9B8885222666028F00FBF9FE /* RxCocoa */,
+			);
 			productName = "ios mvvm sample";
 			productReference = 9B8884AF2665F3E000FBF9FE /* ios mvvm sample.app */;
 			productType = "com.apple.product-type.application";
@@ -245,6 +281,9 @@
 				Base,
 			);
 			mainGroup = 9B8884A62665F3DF00FBF9FE;
+			packageReferences = (
+				9B88851F2666028F00FBF9FE /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 9B8884B02665F3E000FBF9FE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,8 +300,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B8884F22665FCF700FBF9FE /* Login.storyboard in Resources */,
 				9B8884BF2665F3E000FBF9FE /* LaunchScreen.storyboard in Resources */,
+				9B8884F92665FECE00FBF9FE /* List.storyboard in Resources */,
 				9B8884BC2665F3E000FBF9FE /* Assets.xcassets in Resources */,
 				9B8884BA2665F3E000FBF9FE /* Main.storyboard in Resources */,
 			);
@@ -292,7 +331,11 @@
 				9B8884ED2665FCE000FBF9FE /* LoginPage.swift in Sources */,
 				9B8884B72665F3E000FBF9FE /* ViewController.swift in Sources */,
 				9B8884B32665F3E000FBF9FE /* AppDelegate.swift in Sources */,
+				9B88852D266603D800FBF9FE /* LoginViewModel.swift in Sources */,
 				9B8884B52665F3E000FBF9FE /* SceneDelegate.swift in Sources */,
+				9B888538266614FD00FBF9FE /* LoginModel.swift in Sources */,
+				9B8885282666030300FBF9FE /* UserInfo.swift in Sources */,
+				9B8884FE2665FEDA00FBF9FE /* ListPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,6 +668,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9B88851F2666028F00FBF9FE /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9B8885202666028F00FBF9FE /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B88851F2666028F00FBF9FE /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		9B8885222666028F00FBF9FE /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B88851F2666028F00FBF9FE /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9B8884A72665F3DF00FBF9FE /* Project object */;
 }
